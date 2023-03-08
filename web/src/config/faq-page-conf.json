@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "Envios",
+    "icon": "/assets/Shippings.svg",
+    "data": [
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      }
+    ]
+  },
+  {
+    "topic": "Pagos",
+    "icon": "/assets/Payments.svg",
+    "data": [
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      }
+    ]
+  },
+  {
+    "topic": "Devoluciones y cambios",
+    "icon": "/assets/Returns.svg",
+    "data": [
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      }
+    ]
+  },
+  {
+    "topic": "Nuestros productos",
+    "icon": "/assets/Our-Products.svg",
+    "data": [
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito?",
+        "answer": "Se puede pagar en cuotas con todas las tarjetas de crédito de cualquier banco y con tarjeta de débito. Los pagos serán procesados a través."
+      }
+    ]
+  }
+]

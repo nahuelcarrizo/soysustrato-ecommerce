@@ -1,0 +1,52 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@coreui/coreui": "^4.2.6",
+    "@coreui/react": "^4.6.0",
+    "@next/font": "13.1.5",
+    "@sanity/asset-utils": "^1.3.0",
+    "@sanity/client": "^4.0.1",
+    "@sanity/image-url": "^1.0.2",
+    "@types/react-headroom": "^3.2.0",
+    "axios": "^1.3.4",
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.5",
+    "fstp": "^0.9.3",
+    "next": "13.1.5",
+    "next-sanity": "^4.1.2",
+    "next-seo": "^5.15.0",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-carousel": "^4.3.0",
+    "react-dom": "18.2.0",
+    "react-headroom": "^3.2.1",
+    "react-icons": "^4.8.0",
+    "react-multi-carousel": "^2.8.2",
+    "react-player": "^2.11.2",
+    "react-simply-carousel": "^8.5.3",
+    "react-slick": "^0.29.0",
+    "styled-components": "^5.3.6",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@types/next-seo": "^2.1.2",
+    "@types/node": "^18.11.18",
+    "@types/node-fetch": "^2.6.2",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.0.7",
+    "typescript": "^4.9.4"
+  }
+}
