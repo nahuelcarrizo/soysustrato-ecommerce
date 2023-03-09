@@ -124,7 +124,6 @@ const createCategoryContent = (category: CategoryConfiguration, index) => {
 
 const createMobileResult = (categories: CategoryConfiguration[]) => () => {
 
-
   return (
       <NormalColumn key="normal-column">
         {categories.map((x, index) => createCategoryContent(x, index))}
