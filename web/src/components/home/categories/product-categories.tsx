@@ -8,12 +8,8 @@ import styled from 'styled-components';
 const Container = styled.section`
   display: flex;
   flex-direction: row;
-  margin-top: 5rem;
-  max-width: 100vw;
-  margin-left: auto;
-  margin-right: auto;
-  flex-wrap: wrap;
-
+  margin-top: 6rem;
+  background-color: white;
   @media ${device.large} {
     padding: 0 6.75rem 0 6.75rem;
     margin-top: 158px;

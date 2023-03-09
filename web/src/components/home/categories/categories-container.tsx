@@ -10,39 +10,33 @@ import styled from 'styled-components';
 
 const NormalColumn = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100vw;
   overflow: hidden;
-  height: 250.52vw;
+  height: 200.52vw;
   position: relative;
 `;
 
 
 const CategoryImg = styled(RemoteFixedImage)`
-  border-radius: 2px;
-  max-width: 100%;
-  object-fit: cover;
-  min-height: 100%;
-`;
-
-const GradientDiv = styled.div`
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent,#999999 90%, #666);
+  object-fit: contain;
+  min-height: 100%;
+  transform: ${props =>
+  (props.index === 1) ? 'translate(0, 40px) scale(1.4)' : 'scale(1.4)' };
+  translateY
 `;
 
 const LinkContainer = styled.div`
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left:0;
   right: 0;
   justify-content: space-between;
   align-items: center;
+  color: 
+
 `;
 
 const LinkImg = styled.img`
@@ -55,169 +49,100 @@ const CategoryContainer = styled.div`
   width: 100%;
   display: flex;
   cursor: pointer;
-  position: absolute;
   overflow: hidden;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1;
-/*   flex: ${({ isExpanded }) => isExpanded ? 4 : 1};  */
+  position: relative;
   cursor: pointer;
   transition: all .3s ease-out;
-  min-height: 110px;
-  /* min-height: ${({ isExpanded }) => isExpanded ? '151px' : '110px'}; */
-  max-height: 180px;
-  transition: min-height .3s ease-out;
+  min-height: 100px;
   &:hover {
-    transform: scale(${({ isExpanded }) => isExpanded ? 1.05 : 1});
-    flex: 10;
-    min-height: 151px : '110px'};
-  }
+    flex: 2.4 !important;
+  };
 `;
 
-const StyledLink = styled.div`
-  overflow: hidden;
-  height: 100%; 
-  position: relative;
+const StyledGradientDiv = styled.div`
+position: absolute;
+top:0;  
+height: 100%;
+  width: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:
+    ${props => 
+    (props.index === 1)? 'linear-gradient(1deg,rgba(0,0,0,0.3) -9.66%,rgba(0,0,0,0.32) 20.53%,rgba(0,0,0,0.1) 68.72%)' : 'linear-gradient(17.89deg,rgba(0,0,0,0.3) -9.66%,rgba(0,0,0,0.26981) 20.53%,rgba(0,0,0,0) 68.72%)'};
 
+`;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  overflow: hidden;
+  height: 170px;
+  width: 100%;
+  padding: 0 2rem;
+  text-align: left;
 `;
 
 const CategoryName = styled(StyledH4)`
-  color: ${colors.primary.white} !important;
-  font-size: 1.7rem !important;
-  :hover {
-    color: ${colors.primary.dark};
-  }
+  color: ${colors.primary.white};
+  font-size: 1.5rem !important;
+  font
+  opacity: 1;
+  transition: opacity .4s ease-in;
+  transition-delay: .2s;
+  font-family: 'Tilt Warp';
+
 `;
 
-const AccordionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 150vh;
-`;
+const GradientDiv = (props) => {
+  return (
+    <StyledGradientDiv index={props.index}>
+    {props.children}
+    </StyledGradientDiv>
+  )
+} 
 
-const AccordionItemWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  transition: flex 0.3s ease;
-  overflow: hidden;
-`;
-
-const AccordionHeader = styled.div`
-  display: flex;
-`;
-
-const AccordionImage = styled.img`
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-`;
-
-const AccordionTitle = styled.h3`
-  margin: 0;
-`;
-
-const CategoriesContainer = ({ categories }: { categories: CategoryConfiguration[] }) => {
-
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleAccordionClick = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-  };
+const createCategoryContent = (category: CategoryConfiguration, index) => {
 
   return (
-    <AccordionContainer>
-      <AccordionItem
-        index={0}
-        activeIndex={activeIndex}
-        handleClick={handleAccordionClick}
-        title="Elemento 1"
-        imageUrl="https://via.placeholder.com/150"
-      >
-        <p>Contenido del elemento 1</p>
-      </AccordionItem>
-      <AccordionItem
-        index={1}
-        activeIndex={activeIndex}
-        handleClick={handleAccordionClick}
-        title="Elemento 2"
-        imageUrl="https://via.placeholder.com/150"
-      >
-        <p>Contenido del elemento 2</p>
-      </AccordionItem>
-      <AccordionItem
-        index={2}
-        activeIndex={activeIndex}
-        handleClick={handleAccordionClick}
-        title="Elemento 3"
-        imageUrl="https://via.placeholder.com/150"
-      >
-        <p>Contenido del elemento 3</p>
-      </AccordionItem>
-      <AccordionItem
-        index={3}
-        activeIndex={activeIndex}
-        handleClick={handleAccordionClick}
-        title="Elemento 4"
-        imageUrl="https://via.placeholder.com/150"
-      >
-        <p>Contenido del elemento 4</p>
-      </AccordionItem>
-    </AccordionContainer>
+    <CategoryContainer key={category.name} index={index}>
+        <GradientDiv index={index}>
+          <CategoryImg image={category.image} alt={category.name} asset={category.asset} index={index} />
+        </GradientDiv>
+      <LinkContainer>
+          <StyledLink>
+            <CategoryName>{category.name}</CategoryName>
+          </StyledLink>
+      </LinkContainer>
+    </CategoryContainer>
   );
 };
 
-const AccordionItem = ({ index, activeIndex, handleClick, title, imageUrl, children }) => {
-  const isActive = index === activeIndex;
-  const flexSize = isActive ? 2.4 : 1;
 
-  return (
-    <AccordionItemWrapper style={{ flex: flexSize }}>
-      <AccordionHeader onClick={() => handleClick(index)}>
-        <AccordionImage src={imageUrl} alt={title} />
-        <AccordionTitle>{title}</AccordionTitle>
-      </AccordionHeader>
-      {isActive && <AccordionContent>{children}</AccordionContent>}
-    </AccordionItemWrapper>
-  );
-};
+const createMobileResult = (categories: CategoryConfiguration[]) => () => {
 
-export default Accordion;
 
-const AccordionItem = ({ index, activeIndex, handleClick, title, imageUrl, children }) => {
-  const isActive = index === activeIndex;
-  const flexSize = isActive ? 2.4 : 1;
-
-  return (
-    <AccordionItemWrapper style={{ flex: flexSize }}>
-      <AccordionHeader onClick={() => handleClick(index)}>
-        <AccordionImage src={imageUrl} alt={title} />
-        <AccordionTitle>{title}</AccordionTitle>
-      </AccordionHeader>
-      {isActive && <AccordionContent>{children}</AccordionContent>}
-    </AccordionItemWrapper>
-  );
-};
-
- /* const [expandedDiv, setExpandedDiv] = useState(0);
-
-  const handleDivClick = (index) => {
-    setExpandedDiv(index);
-  };
-
-  console.log(expandedDiv)
   return (
       <NormalColumn key="normal-column">
-        <CategoryContainer  key={categories[0].name} style={{top: '0'}} isExpanded={expandedDiv === 0} onClick={()=>handleDivClick(0)}>
-              <CategoryImg image={categories[0].image} alt={categories[0].name} asset={categories[0].asset} />
-        </CategoryContainer>
+        {categories.map((x, index) => createCategoryContent(x, index))}
+      </NormalColumn>
+  );
+};
 
-        <CategoryContainer  key={categories[1].name} style={{top: '110px'}} isExpanded={expandedDiv === 1} onClick={()=>handleDivClick(1)} >
-              <CategoryImg image={categories[1].image} alt={categories[1].name} asset={categories[1].asset} />
-        </CategoryContainer>
-        <CategoryContainer  key={categories[2].name} style={{top: '220px'}} isExpanded={expandedDiv === 2} onClick={()=>handleDivClick(2)}>
-              <CategoryImg image={categories[2].image} alt={categories[2].name} asset={categories[2].asset} />
-        </CategoryContainer>
-      </NormalColumn>  );*/
+const CategoriesContainer = ({ categories }: { categories: CategoryConfiguration[] }) => {
+  const [isCategoriesPage, setIsCategoriesPage] = useState(false);
 
+  useEffect(() => {
+    setIsCategoriesPage(window.location.href.includes('categories'));
+  }, []);
+  return (<>
+      {createMobileResult(categories)()}
+      </>)
 };
 
 export default CategoriesContainer;

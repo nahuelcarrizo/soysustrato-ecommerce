@@ -34,13 +34,7 @@ const Layout: FunctionComponent<LayoutProps> = (props) => {
       <Head>
         <title>Soy Sustrato</title>
         <link rel="icon" href="/soysustratoicon.ico" l />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@200;400;700&family=Poppins:wght@500;800&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Gluten:wght@200;400;700&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap" rel="stylesheet"/>
-      </Head>
+        </Head>
       <NavBar categories={props.categories} />
       {props.children}
       <Footer />
