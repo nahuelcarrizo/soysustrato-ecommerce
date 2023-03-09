@@ -1,7 +1,6 @@
 import { BodyCopyRegularSmall, StyledH3 } from '../../config/global-styled-components';
 import { device, reusablePlaceholder } from '../../config/device';
 
-import Button from '../shared/secondary-button';
 import LazyLoadImage from '../shared/image-types/lazy-image';
 import React from 'react';
 import { colors } from '../../config/global-styles';
@@ -95,7 +94,6 @@ const About = () => {
               Maruja nace cómo un emprendimiento personal inspirado en mi abuela; <strong> María Mahia de Ares</strong>
               ...
             </AboutMobile>
-            <Button text="¿Quién fue Maruja?" url="/about" />
           </TextContainer>
         </ContentContainer>
       </AboutContainer>

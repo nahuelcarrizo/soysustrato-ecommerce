@@ -1,7 +1,5 @@
 import ReactPlayer from 'react-player'
-import { listenerCount } from 'process';
 import sanityClient from "@sanity/client";
-import {useState} from 'react'
 
 export const sanity = new sanityClient({
   projectId: process.env.NEXT_PUBLIC_sanityProjectID,
@@ -9,8 +7,9 @@ export const sanity = new sanityClient({
   useCdn: false,
 });
 
-const RemoteResponsiveVideo = ({ videos, alt, className, onEnded }) => {
+const RemoteResponsiveVideo = (props: any) => {
 
+  const {videos, alt, className, onEnded} = props
 
   const handleVideoEnded = () => {
       if (onEnded) {

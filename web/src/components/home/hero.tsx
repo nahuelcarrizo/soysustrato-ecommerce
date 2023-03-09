@@ -1,12 +1,10 @@
 import { AlignedCenterContainer, BodyCopyRegularSmall, StyledH1 } from '../../config/global-styled-components';
 import React, {useEffect, useState} from 'react';
-import { colors, fonts } from '../../config/global-styles';
 
 import Button from '../shared/secondary-button';
 import { HeroConfiguration } from '../../model/hero-configuration';
-import Image from 'next/image'
-import RemoteResponsiveImage from '../shared/image-types/remote-responsive-image';
 import RemoteResponsiveVideo from '../shared/image-types/remote-responsive-video';
+import { colors } from '../../config/global-styles';
 import { device } from '../../config/device';
 import styled from 'styled-components';
 
@@ -88,8 +86,15 @@ object-fit: contain;
 
   margin-bottom: 0;
 }
-`
-const Hero = (props: HeroConfiguration) => {
+`;
+
+interface ExtendedHeroConfig extends HeroConfiguration {
+  title: any;
+  subtitle: any;
+  videos: any;
+  images: any;
+}
+const Hero = (props: ExtendedHeroConfig) => {
    const [showVideo, setShowVideo] = useState(false) //cambiar a true
    const [index, setIndex] = useState(0)
    const [hasReachedEnd, setHasReachedEnd] = useState(null)
@@ -127,7 +132,7 @@ const Hero = (props: HeroConfiguration) => {
       <TextContainer>
         <HomeTitle>{props.title}</HomeTitle>
         <SubTitle>{props.subtitle}</SubTitle>
-        <Button {...props} />
+        <Button />
       </TextContainer>
     </>
     }

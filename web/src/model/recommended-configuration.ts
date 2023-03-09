@@ -1,5 +1,5 @@
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { SanityImageSource as SanityImageSourceAsset } from '@sanity/asset-utils';
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { SanityImageSource as SanityImageSourceAsset } from "@sanity/asset-utils";
 
 export type RecommendedConfiguration = {
   _id: string;
@@ -8,4 +8,5 @@ export type RecommendedConfiguration = {
   image: SanityImageSource;
   asset: SanityImageSourceAsset;
   stock: number;
+  index: any;
 };

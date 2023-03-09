@@ -42,10 +42,9 @@ const ButtonContainer = styled.div`
 
 `;
 
-const secondaryButton =  (props) => {
+const secondaryButton =  () => {
 
 
-  const { buttonTextLeft, buttonURLLeft, buttonTextRight, buttonURLRight  } = props
   return (
     <ButtonContainer>    
       <UnderLinedComponent>

@@ -1,7 +1,6 @@
 import About from '../components/home/about';
 import { CategoryConfiguration } from '../model/category-configuration';
 import Faq from '../components/shared/faq';
-import Feed from '../components/home/feed';
 import Hero from '../components/home/hero';
 import { HeroConfiguration } from '../model/hero-configuration';
 import Layout from '../components/shared/layout';
@@ -29,12 +28,11 @@ const Home = ({
 
   return (
     <Layout categories={categories}>
-      <Hero {...hero} />
+      <Hero videos={undefined} images={undefined} {...hero} />
       <ProductCategories categories={categories} />
       <ShippingInfo />
       <Recommended recommended={recommended} />
       <UserReviews {...userReviews} />
-      <Feed />
       <Faq />
       <About />
     </Layout>

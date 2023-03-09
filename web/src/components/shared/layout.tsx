@@ -1,7 +1,6 @@
 import '../../config/global-styled-components'
 
 import React, { FunctionComponent, ReactNode } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
 
 import { CategoryConfiguration } from '../../model/category-configuration';
 import Footer from './footer/footer';
@@ -10,6 +9,7 @@ import NavBar from './navbar/navbar';
 import { NextSeo } from 'next-seo';
 import SEO from '../../../next-seo.config';
 import { colors } from '../../config/global-styles';
+import styled from 'styled-components';
 
 const Main = styled.main`
   background-color: ${colors.primary.dark};
@@ -33,7 +33,7 @@ const Layout: FunctionComponent<LayoutProps> = (props) => {
       <NextSeo title={SEO.title} description={SEO.description} openGraph={SEO.openGraph} twitter={SEO.twitter} />
       <Head>
         <title>Soy Sustrato</title>
-        <link rel="icon" href="/soysustratoicon.ico" l />
+        <link rel="icon" href="/soysustratoicon.ico" />
         </Head>
       <NavBar categories={props.categories} />
       {props.children}

@@ -1,7 +1,6 @@
 import CategoriesContainer from './categories-container';
 import { CategoryConfiguration } from '../../../model/category-configuration';
 import React from 'react';
-import { StyledH2 } from '../../../config/global-styled-components';
 import { device } from '../../../config/device';
 import styled from 'styled-components';
 
@@ -16,15 +15,7 @@ const Container = styled.section`
   }
 `;
 
-const ProductCategoriesTitle = styled(StyledH2)`
-  font-style: normal;
-  margin-bottom: 2.5rem;
-  text-align: center;
 
-  @media ${device.large} {
-    display: none;
-  }
-`;
 
 const ProductCategories = ({ categories }: { categories: CategoryConfiguration[] }) => {
   
