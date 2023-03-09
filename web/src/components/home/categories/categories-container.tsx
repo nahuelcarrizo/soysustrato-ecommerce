@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import { CategoryConfiguration } from '../../../model/category-configuration';
-import Link from 'next/link';
 import RemoteFixedImage from '../../shared/image-types/remote-fixed-size-image';
 import { StyledH4 } from '../../../config/global-styled-components';
 import { colors } from '../../../config/global-styles';
-import { device } from '../../../config/device';
 import styled from 'styled-components';
 
 const NormalColumn = styled.div`
