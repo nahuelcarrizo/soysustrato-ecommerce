@@ -10,6 +10,7 @@ export const sanity = new sanityClient({
   projectId: "13iwwz14",
   dataset: "production",
   useCdn: false,
+  apiVersion: "2021-03-25",
 });
 
 export const sanityWriteClient = sanityClient({
