@@ -7,8 +7,8 @@ import createClient, { ClientConfig } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 const config: ClientConfig = {
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  projectId: "13iwwz14",
+  dataset: "production",
   useCdn: true,
   apiVersion: "2021-03-25",
 };
