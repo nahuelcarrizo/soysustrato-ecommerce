@@ -1,9 +1,8 @@
-import React from 'react';
-
-import styled from 'styled-components';
-
 import { BodyCopyRegularSmall, StyledH6Title } from '../../config/global-styled-components';
+
 import Accordion from './cart/accordion/accordion';
+import React from 'react';
+import styled from 'styled-components';
 
 const PaddedH6Title = styled(StyledH6Title)`
   margin-top: 1rem;

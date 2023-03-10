@@ -1,11 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import { colors, typography } from '../../config/global-styles';
+
 import { AlignedCenterContainer } from '../../config/global-styled-components';
 import IconListItem from '../shared/icon-list-item';
-import { typography, colors } from '../../config/global-styles';
+import React from 'react';
+import { ShippingInfoConfig } from '../../model/shipping-info-configuration';
 import ShippingInfoJson from '../../config/shipping-info-conf.json';
 import { device } from '../../config/device';
-import { ShippingInfoConfig } from '../../model/shipping-info-configuration';
+import styled from 'styled-components';
 
 const ShippingInfoContainer = styled(AlignedCenterContainer)`
   margin-top: 5rem;

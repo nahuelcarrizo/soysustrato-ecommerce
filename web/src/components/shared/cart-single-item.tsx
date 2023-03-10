@@ -1,11 +1,12 @@
+import { LabelLarge, LabelLargeBold, LabelSmall, StyledH6Title } from '../../config/global-styled-components';
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+
+import { ActionTypes } from '../../model/action-types';
 import { CartProduct as CP } from '../../../model/cart-product';
 import RemoteFixedSizeImage from '../image-types/remote-fixed-size-image';
-import { LabelLarge, LabelLargeBold, StyledH6Title, LabelSmall } from '../../../config/global-styled-components';
-import { colors } from '../../../config/global-styles';
+import { colors } from '../../config/global-styles';
 import { store } from '../../../context/store';
-import { ActionTypes } from '../../../model/action-types';
+import styled from 'styled-components';
 
 const SingleItemContainer = styled.div`
   display: flex;

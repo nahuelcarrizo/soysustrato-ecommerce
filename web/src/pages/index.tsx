@@ -31,7 +31,6 @@ const Home = ({
       <Hero videos={undefined} images={undefined} {...hero} />
       <ProductCategories categories={categories} />
       <ShippingInfo />
-      <Recommended recommended={recommended} />
       <UserReviews {...userReviews} />
       <Faq />
       <About />

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-
 import { BodyCopyBoldSmall, BodyCopyRegularSmall } from '../../config/global-styled-components';
+
+import React from 'react';
 import { colors } from '../../config/global-styles';
+import styled from 'styled-components';
 
 const ErrorAlertContainer = styled.section<{ isVisible: boolean }>`
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};

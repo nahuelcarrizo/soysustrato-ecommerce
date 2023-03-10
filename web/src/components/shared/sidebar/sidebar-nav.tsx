@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { device } from '../../../config/device';
-import { colors } from '../../../config/global-styles';
 import { BodyCopyBoldLarge } from '../../../config/global-styled-components';
+import React from 'react';
+import { colors } from '../../../config/global-styles';
+import { device } from '../../../config/device';
+import styled from 'styled-components';
 
 const SidebarNavContainer = styled.section`
   min-width: 100vw;

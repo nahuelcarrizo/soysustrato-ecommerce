@@ -1,16 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-
-import { sanity } from '../../lib/sanity';
-
-import Layout from '../components/shared/layout';
-import { device, reusablePlaceholder } from '../config/device';
 import { BodyCopyRegularSmall, StyledH3Title, StyledH4Title } from '../config/global-styled-components';
-import { colors } from '../config/global-styles';
-import LazyLoadImage from '../components/shared/image-types/lazy-image';
+import { device, reusablePlaceholder } from '../config/device';
 
 import { CategoryConfiguration } from '../model/category-configuration';
 import IconListItem from '../components/shared/icon-list-item';
+import Layout from '../components/shared/layout';
+import LazyLoadImage from '../components/shared/image-types/lazy-image';
+import React from 'react';
+import { colors } from '../config/global-styles';
+import { sanity } from '../../lib/sanity';
+import styled from 'styled-components';
 
 const AboutPageContainer = styled.section``;
 

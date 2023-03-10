@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-
 import { DiscountFavoriteBadge, NoStockBadge, SteelBadge } from '../../config/global-styled-components';
-import { Tags } from '../../model/filters/tags';
+
 import { Product } from '../../model/product';
+import React from 'react';
+import { Tags } from '../../model/filters/tags';
+import styled from 'styled-components';
 
 const ExtraRightNoStock = styled(NoStockBadge)`
   right: 1.7rem;

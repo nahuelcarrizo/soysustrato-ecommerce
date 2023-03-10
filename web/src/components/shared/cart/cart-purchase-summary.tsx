@@ -1,12 +1,13 @@
+import { BodyCopyBoldLarge, BodyCopyBoldSmall, LabelSmall } from '../../../config/global-styled-components';
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import ErrorData from '../../../config/error-alert-conf.json';
-import { BodyCopyBoldSmall, BodyCopyBoldLarge, LabelSmall } from '../../../config/global-styled-components';
-import { colors } from '../../../config/global-styles';
-import MP from '../../../config/mercado-pago';
+
 import { CartProduct as CP } from '../../../model/cart-product';
-import PrimaryButton from '../primary-button';
 import ErrorAlert from '../error-alert';
+import ErrorData from '../../../config/error-alert-conf.json';
+import MP from '../../../config/mercado-pago';
+import PrimaryButton from '../primary-button';
+import { colors } from '../../../config/global-styles';
+import styled from 'styled-components';
 
 const PurchaseSummaryContainer = styled.div`
   margin-top: 1rem;

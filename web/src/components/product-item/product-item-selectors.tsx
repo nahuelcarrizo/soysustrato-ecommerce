@@ -1,14 +1,12 @@
-import React from 'react';
-
-import styled from 'styled-components';
-import { device } from '../../config/device';
-
 import { BodyCopyRegularSmall, CaptionSmall, LabelSmall } from '../../config/global-styled-components';
 import { colors, fonts } from '../../config/global-styles';
-import { Product } from '../../model/product';
-import { calculateProductStock } from '../shared/utilities';
 
+import { Product } from '../../model/product';
 import ProductItemSizesSelect from './product-item-sizes-select';
+import React from 'react';
+import { calculateProductStock } from '../shared/utilities';
+import { device } from '../../config/device';
+import styled from 'styled-components';
 
 const ItemExtraQualities = styled.p`
   font-family: ${fonts.secondary.regular.name};

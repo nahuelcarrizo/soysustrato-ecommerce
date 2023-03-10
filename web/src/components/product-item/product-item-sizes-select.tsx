@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-
-import styled from 'styled-components';
-
-import { LabelSmall } from '../../config/global-styled-components';
 import { colors, fonts } from '../../config/global-styles';
-import { Product } from '../../model/product';
-import Chevron from '../shared/chevron';
 
+import Chevron from '../shared/chevron';
+import { LabelSmall } from '../../config/global-styled-components';
+import { Product } from '../../model/product';
 import ProductItemSizeChart from './product-item-sizechart';
+import styled from 'styled-components';
 
 const FakeSelect = styled.div<{ isOpen: boolean }>`
   background: ${colors.ui.grey10percent};

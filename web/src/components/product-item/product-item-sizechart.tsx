@@ -1,11 +1,9 @@
+import { BodyCopyRegularSmall, LabelSmall } from '../../config/global-styled-components';
 import React, { useState } from 'react';
 
-import styled from 'styled-components';
-
-import { BodyCopyRegularSmall, LabelSmall } from '../../config/global-styled-components';
-import { colors } from '../../config/global-styles';
-
 import Sidebar from '../shared/sidebar/sidebar';
+import { colors } from '../../config/global-styles';
+import styled from 'styled-components';
 
 const SizeTable = styled(LabelSmall)`
   color: ${colors.ui.grey75percent};

@@ -1,13 +1,12 @@
+import { BodyCopyRegularSmall, LabelSmall } from '../../config/global-styled-components';
 import React, { useState } from 'react';
 
-import styled from 'styled-components';
-
-import { colors } from '../../config/global-styles';
-import { LabelSmall, BodyCopyRegularSmall } from '../../config/global-styled-components';
 import Chevron from '../shared/chevron';
-import { Tags } from '../../model/filters/tags';
 import { Order } from '../../model/filters/order';
+import { Tags } from '../../model/filters/tags';
+import { colors } from '../../config/global-styles';
 import { device } from '../../config/device';
+import styled from 'styled-components';
 
 const FilterContainer = styled.section`
   display: none;

@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import { ActionTypes } from '../../model/action-types';
 import { colors } from '../../config/global-styles';
-import {css} from 'styled-components';
 import { device } from '../../config/device';
 import { store } from '../../context/store';
 import styled from 'styled-components';
@@ -23,7 +22,10 @@ const Container = styled.section`
   }
 `;
 
-const Bag = styled.div`
+interface BagProps {
+  isWhite?: boolean;
+}
+const Bag = styled.div<BagProps>`
   ${props =>
     props.isWhite ? "background-image: url('/assets/Bag-white.svg')" : "background-image: url('/assets/Bag.svg')"
     };

@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
 import { BodyCopyBoldSmall, BodyCopyRegularSmall } from '../../../../config/global-styled-components';
-import { device } from '../../../../config/device';
+
 import Chevron from '../../chevron';
+import React from 'react';
+import { device } from '../../../../config/device';
+import styled from 'styled-components';
 
 const AccordionQuestionContainer = styled.div<{ makeStatic: boolean }>`
   display: flex;

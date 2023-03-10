@@ -1,10 +1,11 @@
+import { LabelSmall, StyledH3, Subtitle } from '../../config/global-styled-components';
+
 import React from 'react';
-import styled from 'styled-components';
-import { Subtitle, StyledH3, LabelSmall } from '../../config/global-styled-components';
-import { UserReviewsConfiguration } from '../../model/user-reviews-configuration';
 import RemoteFixedImage from '../shared/image-types/remote-fixed-size-image';
+import { UserReviewsConfiguration } from '../../model/user-reviews-configuration';
 import { colors } from '../../config/global-styles';
 import { device } from '../../config/device';
+import styled from 'styled-components';
 
 const BackgroundContainer = styled.section`
   background-color: ${colors.ui.grey5percent};

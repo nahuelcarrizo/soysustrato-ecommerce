@@ -1,7 +1,8 @@
+import { LabelLarge, LabelLargeBold } from '../../config/global-styled-components';
+
+import { NameAndPriceConfiguration } from '../../model/name-and-price-configuration';
 import React from 'react';
 import styled from 'styled-components';
-import { LabelLarge, LabelLargeBold } from '../../config/global-styled-components';
-import { NameAndPriceConfiguration } from '../../model/name-and-price-configuration';
 
 const NameAndPriceContainer = styled.article`
   display: flex;

@@ -1,9 +1,9 @@
-import { LinksLarge, StyledH3 } from '../../../config/global-styled-components';
+import { LinksLarge, StyledH3 } from '../../config/global-styled-components';
 
-import { CartProduct as CP } from '../../../model/cart-product';
+import { CartProduct as CP } from '../../model/cart-product';
 import Link from 'next/link';
 import React from 'react';
-import { colors } from '../../../config/global-styles';
+import { colors } from '../../config/global-styles';
 import styled from 'styled-components';
 
 const EmptyContainer = styled.div<{ cart: CP[] }>`

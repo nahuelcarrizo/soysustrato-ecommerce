@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { sanity } from '../../lib/sanity';
-import Button from '../components/shared/secondary-button';
+import { BodyCopyRegularSmall, StyledH3Title } from '../config/global-styled-components';
 
-import Layout from '../components/shared/layout';
+import Button from '../components/shared/secondary-button';
 import { CategoryConfiguration } from '../model/category-configuration';
-import { StyledH3Title, BodyCopyRegularSmall } from '../config/global-styled-components';
-import { device } from '../config/device';
+import Layout from '../components/shared/layout';
+import React from 'react';
 import { colors } from '../config/global-styles';
+import { device } from '../config/device';
+import { sanity } from '../../lib/sanity';
+import styled from 'styled-components';
 
 const ContactSuccessContainer = styled.section`
   padding: 0 1.5rem 0 1.5rem;

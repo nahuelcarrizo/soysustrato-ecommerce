@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
 import { BodyCopyRegularSmall } from '../../config/global-styled-components';
 import { IconListItemConfig } from '../../model/icon-list-item-configuration';
+import React from 'react';
 import { device } from '../../config/device';
+import styled from 'styled-components';
 
 const FlexContainer = styled.article`
   display: flex;

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-
-import Sidebar from './sidebar/sidebar';
-import Accordion from './cart/accordion/accordion';
 import { BodyCopyBoldSmall, BodyCopyRegularSmall } from '../../config/global-styled-components';
+import React, { useState } from 'react';
+
+import Accordion from './cart/accordion/accordion';
+import Sidebar from './sidebar/sidebar';
 import { colors } from '../../config/global-styles';
 import { device } from '../../config/device';
+import styled from 'styled-components';
 
 const TopicSelectorOuterContainer = styled.div`
   margin-bottom: 1rem;

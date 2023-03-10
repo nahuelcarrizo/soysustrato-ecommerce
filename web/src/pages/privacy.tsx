@@ -1,13 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-
-import { sanity } from '../../lib/sanity';
-
-import Layout from '../components/shared/layout';
-import { CategoryConfiguration } from '../model/category-configuration';
-import { device } from '../config/device';
 import { BodyCopyBoldLarge, BodyCopyRegularLarge, StyledH3Title } from '../config/global-styled-components';
+
+import { CategoryConfiguration } from '../model/category-configuration';
+import Layout from '../components/shared/layout';
+import React from 'react';
 import { colors } from '../config/global-styles';
+import { device } from '../config/device';
+import { sanity } from '../../lib/sanity';
+import styled from 'styled-components';
 
 const PrivacyContainer = styled.section``;
 
