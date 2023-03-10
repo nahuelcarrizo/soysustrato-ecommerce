@@ -74,7 +74,10 @@ height: 100%;
   }
 `;
 
-const StyledLink = styled.a`
+interface StyledLinkProps {
+  index: number;
+}
+const StyledLink = styled.a<StyledLinkProps>`
   height: 100%;
   width: 100%;
   text-align: left;
