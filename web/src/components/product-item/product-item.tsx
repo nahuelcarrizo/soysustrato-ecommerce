@@ -6,7 +6,7 @@ import {
   NoStockBadge,
   SteelBadge,
   StyledH3,
-} from '../global-styled-components';
+} from '../../config/global-styled-components';
 import React, { useState } from 'react';
 import { colors, typography } from '../../config/global-styles';
 

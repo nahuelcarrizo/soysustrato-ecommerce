@@ -5,7 +5,7 @@ import { CartProduct as CP } from '../../model/cart-product';
 import ErrorAlert from './error-alert';
 import ErrorData from '../../config/error-alert-conf.json';
 import MP from '../../config/mercado-pago';
-import PrimaryButton from '../primary-button';
+import PrimaryButton from './primary-button';
 import { colors } from '../../config/global-styles';
 import styled from 'styled-components';
 
@@ -58,7 +58,7 @@ const PurchaseSummary = ({ cart }: { cart: CP[] }) => {
       <PurchaseSummaryContainer>
         <InfoContainer>
           <ShippingIconContainer>
-            <img src="/assets/Shippings.svg" alt="Shipping icon" />
+            <img src="/assets/Shippings.svg" alt="Shipping icon" /> 
           </ShippingIconContainer>
           <InfoTextContainer>
             <InfoTextBold>Podés elegir “Envío” o “Acordar la entrega” durante el pago.</InfoTextBold>

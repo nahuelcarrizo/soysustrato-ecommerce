@@ -6,7 +6,6 @@ import { HeroConfiguration } from '../model/hero-configuration';
 import Layout from '../components/shared/layout';
 import ProductCategories from '../components/home/categories/product-categories';
 import React from 'react';
-import Recommended from '../components/home/recommended/recommended';
 import { RecommendedConfiguration } from '../model/recommended-configuration';
 import ShippingInfo from '../components/home/shipping-info';
 import UserReviews from '../components/home/user-reviews';
