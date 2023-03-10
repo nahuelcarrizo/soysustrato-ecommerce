@@ -1,11 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from './secondary-button';
-import Accordion from './cart/accordion/accordion';
 import { AlignedCenterContainer, BodyCopyRegularSmall, StyledH3 } from '../../config/global-styled-components';
+
+import Accordion from './cart/accordion/accordion';
+import Button from './secondary-button';
 import FaqJson from '../../config/faq-conf.json';
-import { device } from '../../config/device';
+import React from 'react';
 import { colors } from '../../config/global-styles';
+import { device } from '../../config/device';
+import styled from 'styled-components';
 
 const BackgroundContainer = styled.section`
   ${(props: { isDark: boolean }) => (props.isDark ? `background-color:${colors.ui.grey5percent};` : '')};
@@ -93,7 +94,7 @@ const Faq = ({ isDarkBackgroundColor }: { isDarkBackgroundColor?: boolean }) => 
           )}
         </AccordionsDesktopContainer>
         <FaqButtonContainer>
-          <Button text="Ver todas las preguntas frecuentes" url="/faq" />
+          <Button />
         </FaqButtonContainer>
       </FaqContainer>
     </BackgroundContainer>

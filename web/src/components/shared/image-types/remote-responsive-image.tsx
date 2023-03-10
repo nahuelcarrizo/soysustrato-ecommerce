@@ -10,7 +10,7 @@ const remoteResponsiveImage = ({ className, image, alt, asset }: RemoteImageProp
     <LazyLoadImage
       className={className}
       alt={alt}
-      src={getDefaultImage(image)}
+      src={getDefaultImage(image) as unknown as string }
       placeholderSrc={metadata?.lqip}
       sizes=""
       srcSet={`

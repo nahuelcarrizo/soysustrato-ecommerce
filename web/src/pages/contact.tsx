@@ -122,7 +122,7 @@ const ContactPage = ({ categories }: { categories: Array<CategoryConfiguration> 
       setEmail({ value: email.value, error: true });
     } else if (!isFieldValid(content)) {
       setContent({ value: content.value, error: true });
-    } /* else {
+    }  else {
       axios
         .post('/api/send-email', { name: name.value, email: email.value, content: content.value })
         .then(() => router.push('/contact-success'))
@@ -130,7 +130,7 @@ const ContactPage = ({ categories }: { categories: Array<CategoryConfiguration> 
           setShowError(true);
           window.scrollTo(0, 300);
         });
-    } */
+    } 
   };
 
   return (

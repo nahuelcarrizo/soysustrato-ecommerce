@@ -12,6 +12,13 @@ export const sanity = new sanityClient({
   useCdn: false,
 });
 
+export const sanityWriteClient = sanityClient({
+  projectId: process.env.NEXT_PUBLIC_sanityProjectID,
+  dataset: process.env.NEXT_PUBLIC_sanityDataset,
+  token: process.env.sanityAccessToken,
+  useCdn: false,
+});
+
 export const builder = imageUrlBuilder(sanity);
 
 export const getDefaultImage = (image: any) =>

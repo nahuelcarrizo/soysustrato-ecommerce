@@ -14,7 +14,11 @@ import NavbarDropHeader from './navbar-drop-header';
 import Sidebar from '../sidebar/sidebar';
 import { device } from '../../../config/device';
 
-const Container = styled.section`
+interface ContainerProps {
+  isTransparent: string,
+  transition: any,
+}
+const Container = styled.section<ContainerProps>`
   max-width: 87vw;
   margin: auto;
   display: flex;
@@ -38,7 +42,10 @@ const Container = styled.section`
   }
 `;
 
-const Logo = styled.img`
+interface LogoProps {
+  isAtTop: any,
+}
+const Logo = styled.img<LogoProps>`
   ${props=>
   props.isAtTop ? "margin-top: 1rem;" : "margin-top: 0.8rem;"};
   margin-bottom: 0.8rem;

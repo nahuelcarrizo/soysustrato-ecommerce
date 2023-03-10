@@ -6,7 +6,6 @@ import { HeroConfiguration } from '../model/hero-configuration';
 import Layout from '../components/shared/layout';
 import ProductCategories from '../components/home/categories/product-categories';
 import React from 'react';
-import { RecommendedConfiguration } from '../model/recommended-configuration';
 import ShippingInfo from '../components/home/shipping-info';
 import UserReviews from '../components/home/user-reviews';
 import { UserReviewsConfiguration } from '../model/user-reviews-configuration';
@@ -15,12 +14,10 @@ import { sanity } from '../../lib/sanity';
 const Home = ({
   hero,
   categories,
-  recommended,
   userReviews,
 }: {
   hero: HeroConfiguration;
   categories: Array<CategoryConfiguration>;
-  recommended: Array<RecommendedConfiguration>;
   userReviews: UserReviewsConfiguration;
 }) => {
 

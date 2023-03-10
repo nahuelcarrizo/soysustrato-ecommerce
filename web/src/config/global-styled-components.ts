@@ -22,9 +22,9 @@ const H2Styles = css`
 `;
 
 const H3Styles = css`
-  font-family: ${typography.titles.h3.font.name};
+  font-family: "Poppins";
   font-style: normal;
-  font-weight: ${typography.titles.h3.font.regularWeight};
+  font-weight: 500;
   font-size: ${typography.titles.h3.fontSize};
   line-height: ${typography.titles.h3.lineHeight};
   color: ${colors.primary.dark};

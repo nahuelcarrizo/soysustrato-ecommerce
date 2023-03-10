@@ -76,7 +76,7 @@ const ConfirmPurchasePage = ({ categories }: { categories: Array<CategoryConfigu
             </Link>{' '}
             si tenés alguna duda.
           </StyledSubTitle>
-          <SecondaryButton text="DESCUBRIR MAS PRODUCTOS" url="/categories/productos" />
+          <SecondaryButton  />
         </ConfirmPurchasePageSubTitle>
       </ConfirmPurchasePageContainer>
     </Layout>
