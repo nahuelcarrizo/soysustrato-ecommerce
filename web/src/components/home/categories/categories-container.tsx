@@ -58,7 +58,7 @@ const CategoryName = styled(StyledH4)`
 `;
 
 
-const StyledGradientDiv = styled.div<{index:Number}>`
+const StyledGradientDiv = styled.div<{index: Number}>`
 position: absolute;
 top:0;  
 height: 100%;
@@ -74,10 +74,8 @@ height: 100%;
   }
 `;
 
-interface StyledLinkProps {
-  index: number;
-}
-const StyledLink = styled.a<StyledLinkProps>`
+
+const StyledLink = styled.a<{index: Number}>`
   height: 100%;
   width: 100%;
   text-align: left;
@@ -89,7 +87,7 @@ const StyledLink = styled.a<StyledLinkProps>`
   text-decoration: none !important!;
 `;
 
-const CategoryContainer = styled.div`
+const CategoryContainer = styled.div<{index: Number;}>`
   width: 100%;
   display: flex;
   cursor: pointer;
