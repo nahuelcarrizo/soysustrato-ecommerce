@@ -136,7 +136,7 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
   const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
   const [isNavbarUnpinned, setNavbarUnpinned] = useState(true);
   const [ isTransparent, setIsTransparent] = useState(null);
-  const [ transition, setTransition] = useState(null);
+  const [ transition, setTransition] = useState('all .3s ease 0s');
   const [lastScrollY, setLastScrollY] = useState(0);
   const trColor = 'trasparent' 
   const wtColor = 'white'
@@ -169,12 +169,13 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
-
+  console.log("isTransparent: " + isTransparent, "transition: " + transition, "isMenuOpen: " + isMenuOpen);
+  
   return (
     <HeadroomContainer
       pinStart={0}
-      onUnpin={() => {setNavbarUnpinned(true); console.log('unpinned')}}
-      onPin={() => {setNavbarUnpinned(false); console.log('pinned')}}
+      onUnpin={() => {setNavbarUnpinned(true)}}
+      onPin={() => {setNavbarUnpinned(false)}}
       disable={isNavbarUnpinned && (isCartOpen || isMenuOpen)}
       style={{top:"1.5rem"}}
       >

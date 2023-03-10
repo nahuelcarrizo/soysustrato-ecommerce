@@ -15,7 +15,9 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     scroll-behavior:smooth;
   }
-
+  body a { 
+    text-decoration: none;
+  }
   * {
     margin: 0;
     padding: 0;

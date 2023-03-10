@@ -42,6 +42,7 @@ export const getServerSideProps = async () => {
         searchName,
         name,
         image,
+        description,
         "images": image[]{
           "url": asset->url
        }

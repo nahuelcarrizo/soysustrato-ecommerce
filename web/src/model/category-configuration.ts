@@ -1,6 +1,7 @@
-import { ImageConfiguration } from './image-configuration';
+import { ImageConfiguration } from "./image-configuration";
 
 export type CategoryConfiguration = ImageConfiguration & {
   name: string;
   searchName: string;
+  description: string;
 };

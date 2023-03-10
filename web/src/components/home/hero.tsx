@@ -15,7 +15,6 @@ const TextContainer = styled.div`
   border-radius: 7px;
   background-color: ${colors.secondary.keen};
   top: 6rem;
-  z-index: 10;
   overflow: visible;
   position: relative;
   @media ${device.large} {
