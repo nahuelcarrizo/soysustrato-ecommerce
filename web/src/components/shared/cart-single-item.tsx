@@ -2,10 +2,10 @@ import { LabelLarge, LabelLargeBold, LabelSmall, StyledH6Title } from '../../con
 import React, { useContext } from 'react';
 
 import { ActionTypes } from '../../model/action-types';
-import { CartProduct as CP } from '../../../model/cart-product';
-import RemoteFixedSizeImage from '../image-types/remote-fixed-size-image';
+import { CartProduct as CP } from '../../model/cart-product';
+import RemoteFixedSizeImage from './image-types/remote-fixed-size-image';
 import { colors } from '../../config/global-styles';
-import { store } from '../../../context/store';
+import { store } from '../../context/store';
 import styled from 'styled-components';
 
 const SingleItemContainer = styled.div`
