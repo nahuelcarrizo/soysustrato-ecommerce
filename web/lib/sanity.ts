@@ -12,7 +12,7 @@ const config: ClientConfig = {
   useCdn: true,
   apiVersion: "2021-03-25",
 };
-export const sanity = new createClient({ config });
+export const sanity = new createClient(config);
 
 export const sanityWriteClient = createClient({
   projectId: "13iwwz14",
