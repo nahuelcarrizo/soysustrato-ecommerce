@@ -92,5 +92,4 @@ const SingleItem = ({ product }: { product: CP }) => {
     </SingleItemContainer>
   );
 };
-
 export default SingleItem;
