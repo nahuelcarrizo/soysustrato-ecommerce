@@ -7,14 +7,14 @@ import imageUrlBuilder from "@sanity/image-url";
 import sanityClient from "@sanity/client";
 
 export const sanity = new sanityClient({
-  projectId: process.env.NEXT_PUBLIC_sanityProjectID,
-  dataset: process.env.NEXT_PUBLIC_sanityDataset,
+  projectId: "13iwwz14",
+  dataset: "production",
   useCdn: false,
 });
 
 export const sanityWriteClient = sanityClient({
-  projectId: process.env.NEXT_PUBLIC_sanityProjectID,
-  dataset: process.env.NEXT_PUBLIC_sanityDataset,
+  projectId: "13iwwz14",
+  dataset: "production",
   token: process.env.sanityAccessToken,
   useCdn: false,
 });
