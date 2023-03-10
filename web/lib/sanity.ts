@@ -2,18 +2,19 @@ import {
   SanityImageSource as SanityImageSourceAsset,
   getImageAsset,
 } from "@sanity/asset-utils";
+import createClient, { ClientConfig } from "@sanity/client";
 
 import imageUrlBuilder from "@sanity/image-url";
-import sanityClient from "@sanity/client";
 
-export const sanity = new sanityClient({
-  projectId: "13iwwz14",
-  dataset: "production",
-  useCdn: false,
+const config: ClientConfig = {
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  useCdn: true,
   apiVersion: "2021-03-25",
-});
+};
+export const sanity = new createClient({ config });
 
-export const sanityWriteClient = sanityClient({
+export const sanityWriteClient = createClient({
   projectId: "13iwwz14",
   dataset: "production",
   token: process.env.sanityAccessToken,
