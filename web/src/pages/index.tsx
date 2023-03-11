@@ -28,7 +28,7 @@ const Home = ({
 
   return (
     <Layout categories={categories}>
-      <FloatingWhatsApp phoneNumber='+5492975046070' accountName='Soy Sustrato' avatar='/assets/logo-header.jpg' allowClickAway chatMessage='Hola! Como podemos ayudarte? 🤝'/>
+      <FloatingWhatsApp phoneNumber='+5492975046070' accountName='Soy Sustrato' avatar='/assets/logowhatsapp.jpg' allowClickAway chatMessage='Hola! Como podemos ayudarte? 🤝'/>
       <Hero videos={undefined} images={undefined} {...hero} />
       <ProductCategories categories={categories} />
       <ShippingInfo />

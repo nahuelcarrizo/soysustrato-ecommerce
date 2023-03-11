@@ -20,7 +20,7 @@ const MenuContainer = styled.div<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-around;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
   @media ${device.large} {
     display: none;
   }
