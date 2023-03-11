@@ -9,6 +9,8 @@ import styled from 'styled-components';
 
 const BackgroundContainer = styled.section`
   background-color: ${colors.ui.grey5percent};
+  width: 100%;
+  padding-bottom: 3rem;
 `;
 
 const ReviewContainer = styled.article`
@@ -90,7 +92,7 @@ const UserReviews = ({ text, instagramTag, image, asset }: UserReviewsConfigurat
     <BackgroundContainer>
       <ReviewContainer>
         <ReviewTextContainer>
-          <ReviewTitle>Historias Felices</ReviewTitle>
+          <ReviewTitle>Feed de intagram</ReviewTitle>
           <ReviewText>{text}</ReviewText>
           <ReviewTag>
             <InstagramLogo alt="instagram-logo" src="/assets/Instagram.svg" />
@@ -98,7 +100,7 @@ const UserReviews = ({ text, instagramTag, image, asset }: UserReviewsConfigurat
           </ReviewTag>
         </ReviewTextContainer>
 
-        <InstagramProfileImage image={image} asset={asset} alt="instagram profile" />
+{/*         <InstagramProfileImage image={image} asset={asset} alt="instagram profile" /> */}
       </ReviewContainer>
     </BackgroundContainer>
   );

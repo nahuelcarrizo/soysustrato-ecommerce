@@ -5,6 +5,8 @@ import Hero from '../components/home/hero';
 import { HeroConfiguration } from '../model/hero-configuration';
 import Layout from '../components/shared/layout';
 import ProductCategories from '../components/home/categories/product-categories';
+import Properties  from '../components/home/properties/properties';
+import { PropertiesConfiguration } from '../model/properties-configuration';
 import React from 'react';
 import ShippingInfo from '../components/home/shipping-info';
 import UserReviews from '../components/home/user-reviews';
@@ -15,9 +17,11 @@ const Home = ({
   hero,
   categories,
   userReviews,
+  properties
 }: {
   hero: HeroConfiguration;
   categories: Array<CategoryConfiguration>;
+  properties: Array<PropertiesConfiguration>;
   userReviews: UserReviewsConfiguration;
 }) => {
 
@@ -26,6 +30,7 @@ const Home = ({
     <Layout categories={categories}>
       <Hero videos={undefined} images={undefined} {...hero} />
       <ProductCategories categories={categories} />
+{/*       <Properties properties={properties}  /> */}
       <ShippingInfo />
       <UserReviews {...userReviews} />
       <Faq />
@@ -56,7 +61,7 @@ export const getServerSideProps = async () => {
         "url": asset->url
         }
       },
-      recommended[]->{
+      properties[]->{
         ...,
         "image": images[0],
         "asset": images[0].asset-> {
@@ -74,14 +79,21 @@ export const getServerSideProps = async () => {
      }
   `
   );
-/*   if (!sanityResult || !sanityResult.hero.f){
-    console.log(sanityResult.hero)
-    return {
-
-      notFound: true, //Manejo de error: página no encontrada
-    }; */
-  //}
-  return { props: { ...sanityResult } };
+  
+/*   const sanityProducts = await sanity.fetch(
+    `*[_type == "properties"]{
+      ...,
+      "images": image[]{
+        "url": asset->url
+      },
+      }
+    }
+    `
+  ); */
+  return { 
+    props: {
+       ...sanityResult,
+   },
 };
-
+}
 export default Home;

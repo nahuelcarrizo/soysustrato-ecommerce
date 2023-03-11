@@ -27,17 +27,13 @@ export default {
       ],
     },
     {
-      title: 'Compra comunitaria',
-      name: 'recommended',
+      title: 'Properties',
+      name: 'properties',
       type: 'array',
       of: [
         {
           type: 'reference',
-          to: [{type: 'tag'}],
-          options: {
-            filter: 'tag == $tag',
-            filterParams: {tag: 'Compra comunitaria'},
-          },
+          to: [{type: 'properties'}],
         },
       ],
     },

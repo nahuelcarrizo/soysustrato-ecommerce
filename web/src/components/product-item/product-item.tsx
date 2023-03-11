@@ -180,7 +180,7 @@ const StyledCarousel = styled(ProductItemCarousel)`
 `;
 
 const ImageMozaic = styled.article<{ rows: number }>`
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: ${(props) => `repeat(${props.rows}, 1fr);`};
   grid-gap: 1.2rem;

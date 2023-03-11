@@ -9,13 +9,13 @@ import { device } from '../../config/device';
 import styled from 'styled-components';
 
 const BackgroundContainer = styled.section`
-  ${(props: { isDark: boolean }) => (props.isDark ? `background-color:${colors.ui.grey5percent};` : '')};
+ background-color: ${colors.ui.grey5percent}
 `;
 
 const FaqContainer = styled(AlignedCenterContainer)`
   max-width: 1600px;
   margin: auto;
-  padding: 4rem 1.5rem 2.5rem 1.5rem;
+  padding: 4rem 3rem 2.5rem 3rem;
 
   @media ${device.large} {
     text-align: left;
@@ -33,7 +33,7 @@ const FaqButtonContainer = styled(AlignedCenterContainer)`
 
 const FaqTitle = styled(StyledH3)`
   margin-bottom: 2.5rem;
-
+  font-size: 1.7rem;
   @media ${device.large} {
     margin-bottom: 4rem;
     margin-top: 0;
@@ -93,9 +93,6 @@ const Faq = ({ isDarkBackgroundColor }: { isDarkBackgroundColor?: boolean }) => 
             createAccordionContent(question.question, question.answer, index, false)
           )}
         </AccordionsDesktopContainer>
-        <FaqButtonContainer>
-          <Button />
-        </FaqButtonContainer>
       </FaqContainer>
     </BackgroundContainer>
   );

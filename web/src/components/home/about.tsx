@@ -82,17 +82,12 @@ const About = () => {
     <BackgroundContainer>
       <AboutContainer>
         <ContentContainer>
-          <Image alt="feed-image" key="soysustrato" src="/assets/Maruja-About.jpg" placeholderSrc={reusablePlaceholder} />
+{/*           <Image alt="feed-image" key="soysustrato" src="/assets/Maruja-About.jpg" placeholderSrc={reusablePlaceholder} /> */}
           <TextContainer>
             <MobileAboutTitle>Sobre Soy Sustrato</MobileAboutTitle>
-            <AboutDescription>
-              Maruja nace cómo un emprendimiento personal inspirado en mi abuela; <strong>María Mahia de Ares</strong>.
-              ¿Quién fue Maruja? Una mujer simple, amable, con mucha energía sobre todas las cosas, andaba de un lado
-              para el otro siempre con una sonrisa.
-            </AboutDescription>
             <AboutMobile>
-              Maruja nace cómo un emprendimiento personal inspirado en mi abuela; <strong> María Mahia de Ares</strong>
-              ...
+            LOS INSUMOS QUE OFRECEMOS SON <strong>SUSTENTABLES + BIODEGRADABLES + COMPOSTABLES.</strong>
+            ...
             </AboutMobile>
           </TextContainer>
         </ContentContainer>

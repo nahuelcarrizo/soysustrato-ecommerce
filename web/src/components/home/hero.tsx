@@ -71,14 +71,14 @@ const HomeContainer = styled(AlignedCenterContainer)`
     position: relative;
   }
 `;
-const Img = styled.img`
+const Img = styled.img<{opacity: Any}>`
 width: 100%;
 height: 100%;
 margin-top: 2.5rem;
 z-index:0;
 object-fit: contain;
-
-
+opacity: ${props => props.opacity};
+transition: opacity 0.5s ease-in-out 2s;
 @media ${device.large} {
   width: 50%;
   margin-top:6rem;
@@ -97,6 +97,7 @@ const Hero = (props: ExtendedHeroConfig) => {
    const [showVideo, setShowVideo] = useState(false) //cambiar a true
    const [index, setIndex] = useState(0)
    const [hasReachedEnd, setHasReachedEnd] = useState(null)
+   const [imageOpacity, setImageOpacity] = useState(1)
 
   useEffect(() => {
     let interval = null;
@@ -111,7 +112,7 @@ const Hero = (props: ExtendedHeroConfig) => {
     } else {
       interval = setInterval(() => {
         setIndex(index + 1);
-      }, 2000);
+      }, 2500);
     }
   
     return () => clearInterval(interval);
@@ -121,13 +122,26 @@ const Hero = (props: ExtendedHeroConfig) => {
     setShowVideo(false);
   };
 
+  const handleImageLoad = () => {
+    // Update the opacity state to show the new image
+    setImageOpacity(1);
+  }
+
+  const handleImageChange = () => {
+    // Fade out the image
+    setImageOpacity(0);
+    // Wait for the transition to complete and then update the image index
+    setTimeout(() => {
+      setIndex((index + 1) % props.images.length);
+    }, 1000);
+  }
 
 
   return (
     <HomeContainer>
     {showVideo ? <Vid videos={props.videos} alt="hero video" onEnded={handleVideoEnded} />:
       <>
-      <Img src={props.images[index].url} alt="hero image" width={'500'} height={'500'}/>
+      <Img src={props.images[index].url} alt="hero image" width={'500'} height={'500'} opacity={imageOpacity} onLoad={handleImageLoad} onError={handleImageLoad} onTransitionEnd={handleImageChange}/>
       <TextContainer>
         <HomeTitle>{props.title}</HomeTitle>
         <SubTitle>{props.subtitle}</SubTitle>

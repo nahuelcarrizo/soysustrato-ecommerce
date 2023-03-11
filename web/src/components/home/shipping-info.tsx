@@ -8,16 +8,18 @@ import ShippingInfoJson from '../../config/shipping-info-conf.json';
 import { device } from '../../config/device';
 import styled from 'styled-components';
 
-const ShippingInfoContainer = styled(AlignedCenterContainer)`
-  margin-top: 5rem;
+const ShippingInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 3rem;
   max-width: 1600px;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
+  background-color: white;
+  text-align: center;
 
   @media ${device.large} {
     margin-top: 8rem;
@@ -71,7 +73,6 @@ const ShippingInfoItemsContainer = styled.div`
 const ShippingInfo = () => {
   return (
     <ShippingInfoContainer>
-      <ShippingInfoTitle>{ShippingInfoJson.title}</ShippingInfoTitle>
       <ShippingInfoItemsContainer>
         {ShippingInfoJson.data.map((data, index) => createShippingInfoContent(data, index))}
       </ShippingInfoItemsContainer>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import NameAndPrice from '../name-and-price';
 import React from 'react';
-import { RecommendedConfiguration } from '../../../model/recommended-configuration';
+import { RecommendedConfiguration } from '../../../model/properties-configuration';
 import RemoteFixedSizeImage from '../image-types/remote-fixed-size-image';
 import { device } from '../../../config/device';
 import styled from 'styled-components';

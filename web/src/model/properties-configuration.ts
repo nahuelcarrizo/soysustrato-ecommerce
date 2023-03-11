@@ -1,12 +1,10 @@
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { SanityImageSource as SanityImageSourceAsset } from "@sanity/asset-utils";
 
-export type RecommendedConfiguration = {
+export type PropertiesConfiguration = {
   _id: string;
   name: string;
-  price: number;
-  image: SanityImageSource;
+  images: SanityImageSource;
   asset: SanityImageSourceAsset;
-  stock: number;
-  index: any;
+  index?: any;
 };

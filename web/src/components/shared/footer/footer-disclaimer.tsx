@@ -38,7 +38,7 @@ const StyledLink = styled.a`
 const FooterDisclaimer = ({ shouldDisplayBelow }: { shouldDisplayBelow?: boolean }) => {
   return (
     <DisclaimerContainer shouldDisplayBelow={shouldDisplayBelow}>
-      <FooterDisclaimerText>© 2020 MARUJA. Todos los derechos reservados</FooterDisclaimerText>
+      <FooterDisclaimerText>© 2023 SOYSUSTRATO. Todos los derechos reservados</FooterDisclaimerText>
       <FooterDisclaimerText>
         <Link href="/conditions" passHref legacyBehavior>
           <StyledLink> Términos y Condiciones de Uso</StyledLink>
@@ -49,8 +49,7 @@ const FooterDisclaimer = ({ shouldDisplayBelow }: { shouldDisplayBelow?: boolean
         </Link>
       </FooterDisclaimerText>
 
-      <FooterDisclaimerText>Diseño - Thanh-Hông LÊ (Camille) y Sofia Toso</FooterDisclaimerText>
-      <FooterDisclaimerText>Desarrollo - Manuel Aceituno y Patricio Ferraggi</FooterDisclaimerText>
+      <FooterDisclaimerText>Diseño y Desarrollo - Nahuel Carrizo</FooterDisclaimerText>
     </DisclaimerContainer>
   );
 };

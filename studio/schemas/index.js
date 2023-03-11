@@ -8,6 +8,7 @@ import hero from './home/hero'
 import home from './home/home'
 import productWithSizes from './productWithSizes'
 import products from './product'
+import properties from './home/properties'
 import tag from './tag'
 import userReview from './home/user-review'
 
@@ -18,4 +19,4 @@ import userReview from './home/user-review'
 // Then import schema types from any plugins that might expose them
 
 // Then we give our schema to the builder and provide the result to Sanity
-export default [products, productWithSizes, categories, tag, home, hero, userReview]
+export default [products, productWithSizes, categories, tag, home, hero, userReview, properties]
