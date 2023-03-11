@@ -102,7 +102,7 @@ const AboutPage = ({ categories }: { categories: Array<CategoryConfiguration> })
             <UpperText>
               Soy Sustrato
             </UpperText>
-            <Image alt="feed-image" key="soy sustrato" src="/assets/Maruja-About.jpg" placeholderSrc={reusablePlaceholder} />
+            <Image alt="feed-image" key="soy sustrato" src="/assets/manifiesto-2.jpg" placeholderSrc={reusablePlaceholder} />
             <LowerText>
             Soy Sustrato
             </LowerText>

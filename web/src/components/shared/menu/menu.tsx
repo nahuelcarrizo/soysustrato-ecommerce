@@ -12,11 +12,10 @@ const MenuContainer = styled.div<{ isOpen: boolean }>`
   width: 100vw;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: -30px;
   left: ${(props) => (props.isOpen ? '0' : '-100%')};
   background-color: ${colors.ui.grey5percent};
   overflow-x: hidden;
-  padding-top: 60px;
   transition: 0.5s;
   display: flex;
   justify-content: space-around;
@@ -66,8 +65,6 @@ const Menu = ({ isOpen, categories }: { isOpen: boolean; categories: CategoryCon
             </LinkContainer>
           ))}
       </CategoriesContainer>
-      <Line />
-      <FooterMobileDesktopLinks isFooter={false} />
     </MenuContainer>
   );
 };
