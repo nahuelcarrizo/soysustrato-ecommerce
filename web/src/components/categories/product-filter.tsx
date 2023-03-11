@@ -120,8 +120,8 @@ const ProductFilter = ({
           <DropdownListItem onClick={() => orderAndClose(Order.DESC)}>Precio descendente</DropdownListItem>
         </DropdownList>
         <DropdownList shouldDisplayDropdown={isFiltersOpen}>
-          <DropdownListItem onClick={() => filterAndClose(Tags.Steel)}>Acero quirúrgico</DropdownListItem>
-          <DropdownListItem onClick={() => filterAndClose(Tags.Discount)}>En descuento</DropdownListItem>
+          <DropdownListItem onClick={() => filterAndClose(Tags.Steel)}>Compra comunitaria</DropdownListItem>
+          <DropdownListItem onClick={() => filterAndClose(Tags.Discount)}>Entrega Inmediata</DropdownListItem>
           <DropdownListItem onClick={() => filterAndClose(Tags.Favorite)}>Favoritos</DropdownListItem>
           <DropdownListItem onClick={() => filterAndClose(Tags.All)}>Todos</DropdownListItem>
         </DropdownList>

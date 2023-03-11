@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import { Order } from '../../model/filters/order';
 import { Product } from '../../model/product';
-import ProductFilter from './product-filter';
 import ProductFilterDesktop from './product-filter-desktop';
 import ProductListItem from './product-list-item';
 import { Tags } from '../../model/filters/tags';
@@ -81,7 +80,6 @@ const ProductList = ({ categoryName, products, productsWithSize }: { categoryNam
     <div>
       <CategoryHeader>{categoryName}</CategoryHeader>
       <HeaderSeparation />
-      <ProductFilter filterProducts={onFilterChange} orderProducts={onSortChange} />
       <ProductFilterDesktop filterProducts={onFilterChange} orderProducts={onSortChange} />
       {count > 0 && (
         <TotalCount>

@@ -36,12 +36,16 @@ const CategoriesContainer = styled.div`
 
 const LinkContainer = styled.div`
   margin-top: 1rem;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const CategoryName = styled(StyledH1)``;
+const CategoryName = styled(StyledH1)`
+font-family: 'Oswald';
+font-size: 2.4rem;
+`;
 
 const Line = styled.div`
   border-bottom: 1px solid #f8e9e7;

@@ -87,7 +87,7 @@ const ReviewTextContainer = styled.div`
 
 const ReviewTagText = styled(LabelSmall)``;
 
-const UserReviews = ({ text, instagramTag, image, asset }: UserReviewsConfiguration) => {
+const UserReviews = ({ text, image, asset }: UserReviewsConfiguration) => {
   return (
     <BackgroundContainer>
       <ReviewContainer>
@@ -96,7 +96,6 @@ const UserReviews = ({ text, instagramTag, image, asset }: UserReviewsConfigurat
           <ReviewText>{text}</ReviewText>
           <ReviewTag>
             <InstagramLogo alt="instagram-logo" src="/assets/Instagram.svg" />
-            <ReviewTagText>{instagramTag}</ReviewTagText>
           </ReviewTag>
         </ReviewTextContainer>
 

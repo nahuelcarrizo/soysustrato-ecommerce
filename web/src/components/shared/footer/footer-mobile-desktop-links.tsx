@@ -62,7 +62,7 @@ const FooterMobileDesktopLinks = ({ isFooter }: { isFooter: boolean }) => {
     <FooterMobileDesktopLinksContainer isFooter={isFooter}>
       <Link href="/about" passHref legacyBehavior>
         <LargeOnlyLink isFooter={isFooter}>
-          <FooterLabel isFooter={isFooter}>SOBRE MARUJA</FooterLabel>
+          <FooterLabel isFooter={isFooter}>SOBRE SOY SUSTRATO</FooterLabel>
         </LargeOnlyLink>
       </Link>
       <Link href="/contact" passHref legacyBehavior> 
