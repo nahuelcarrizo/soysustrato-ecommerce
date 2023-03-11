@@ -61,7 +61,7 @@ const ConditionsPage = ({ categories }: { categories: Array<CategoryConfiguratio
               En algunos casos, para adquirir un producto, será necesario el registro por parte del usuario, con ingreso
               de datos personales fidedignos y definición de una contraseña. El usuario puede elegir y cambiar la clave
               para su acceso de administración de la cuenta en cualquier momento, en caso de que se haya registrado y
-              que sea necesario para la compra de alguno de nuestros productos. https://www.bymaruja.com no asume la
+              que sea necesario para la compra de alguno de nuestros productos. https://www.soysustrato.vercel.app no asume la
               responsabilidad en caso de que entregue dicha clave a terceros.
             </TextParagraph>
             <TextParagraph>
@@ -76,7 +76,7 @@ const ConditionsPage = ({ categories }: { categories: Array<CategoryConfiguratio
           <Title>LICENCIA</Title>
           <TextContainer>
             <TextParagraph>
-              Maruja Accesorios a través de su sitio web concede una licencia para que los usuarios utilicen los
+              Soy Sustrato a través de su sitio web concede una licencia para que los usuarios utilicen los
               productos que son vendidos en este sitio web de acuerdo a los Términos y Condiciones que se describen en
               este documento.
             </TextParagraph>

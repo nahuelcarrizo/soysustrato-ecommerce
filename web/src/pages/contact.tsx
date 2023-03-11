@@ -170,13 +170,9 @@ const ContactPage = ({ categories }: { categories: Array<CategoryConfiguration> 
               <StyledLink href="https://www.instagram.com/bymaruja/" target="_blank" rel="noopener noreferrer">
                 <SocialNetworkHeader>
                   <Icon src="/assets/Instagram.svg" />
-                  @ByMaruja
+                  @SoySustrato
                 </SocialNetworkHeader>
               </StyledLink>
-            </SocialNetwork>
-            <SocialNetwork>
-              <SocialNetworkTitle>CONTACTANOS POR EMAIL</SocialNetworkTitle>
-              <SocialNetworkHeader>marujabyrocio@gmail.com</SocialNetworkHeader>
             </SocialNetwork>
           </SocialNetworksContainer>
         </LargeOnlyContainer>

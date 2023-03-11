@@ -86,12 +86,12 @@ const FooterDesktopLinks = () => {
   return (
     <FooterDesktopLinksContainer>
       <LogoLink href="/">
-        <img src="/assets/Logo.svg" alt="Logo Maruja" />
+        <img src="/assets/Logo.svg" alt="Logo Soy Sustrato" />
       </LogoLink>
 
       {footerJson.data.desktop.map((link, index) => createLink(link.legend, link.link, index))}
 
-      <CornerLink href="https://www.instagram.com/bymaruja/" target="_blank" rel="noopener noreferrer">
+      <CornerLink href="https://www.instagram.com/soy.sustrato?igshid=YmMyMTA2M2Y=/" target="_blank" rel="noopener noreferrer">
         <CornerLinkText>SEGUÍNOS EN INSTAGRAM</CornerLinkText>
         <MarujaLink>
           <InstaLogoLarge src="/assets/Instagram.svg" alt="Instagram Logo" />

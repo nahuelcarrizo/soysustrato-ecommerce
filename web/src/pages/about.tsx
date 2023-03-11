@@ -96,19 +96,19 @@ const AboutPage = ({ categories }: { categories: Array<CategoryConfiguration> })
   return (
     <Layout categories={categories}>
       <AboutPageContainer>
-        <CategoryHeader>Sobre Maruja</CategoryHeader>
+        <CategoryHeader>Sobre Soy Sustrato</CategoryHeader>
         <CenteredContainer>
           <AboutTextContainer>
             <UpperText>
               Soy Sustrato
             </UpperText>
-            <Image alt="feed-image" key="maruja" src="/assets/Maruja-About.jpg" placeholderSrc={reusablePlaceholder} />
+            <Image alt="feed-image" key="soy sustrato" src="/assets/Maruja-About.jpg" placeholderSrc={reusablePlaceholder} />
             <LowerText>
             Soy Sustrato
             </LowerText>
           </AboutTextContainer>
           <BuyMarujaContainer>
-            <ByMarujaTitle>Comprar en Maruja significa...</ByMarujaTitle>
+            <ByMarujaTitle>Comprar en Soy Sustrato significa...</ByMarujaTitle>
             <BuyMarujaBenefits>
               <StyledIconListItem
                 removePadding={false}
@@ -126,13 +126,6 @@ const AboutPage = ({ categories }: { categories: Array<CategoryConfiguration> })
                 key={2}
               />
 
-              <StyledIconListItem
-                removePadding={true}
-                image="/assets/Contact.svg"
-                text="Comprar a industria nacional"
-                alt="beneficio"
-                key={3}
-              />
             </BuyMarujaBenefits>
           </BuyMarujaContainer>
         </CenteredContainer>

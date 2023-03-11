@@ -28,15 +28,6 @@ const PaymentDescription = () => {
           Además. no tiene costo adicional.
         </BodyCopyRegularSmall>
       </Accordion>
-      <Accordion title="Información sobre envíos y entregas" index={0} initialHiddenStatus isBold={true}>
-        <PaddedImage alt="mercadopago" src="/assets/Pagos.svg" />
-        <PaddedH6Title>PAGO EN EFECTIVO EN LA ENTREGA</PaddedH6Title>
-        <BodyCopyRegularSmall>
-          Solo hacemos entregas gratis en las estacionesde tren Lomas de Zamora y Témperley. Si preferís pagar en ese
-          momento, seleccioná “Efectivo” en Mercado Pago, ignorá el mail de prepago y escribime a
-          marujabyrocio@gmail.com para que coordinemos la entrega.
-        </BodyCopyRegularSmall>
-      </Accordion>
     </DeliveryInformationContainer>
   );
 };

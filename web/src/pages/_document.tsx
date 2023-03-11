@@ -5,7 +5,7 @@ import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, Next
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
-export default class MarujaDocument extends Document {
+export default class SoySustratoDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps>{
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
