@@ -32,8 +32,13 @@ const FaqButtonContainer = styled(AlignedCenterContainer)`
 `;
 
 const FaqTitle = styled(StyledH3)`
+font-family: 'Oswald' !important;
+& > * {
+  font-family: 'Oswald' !important;  
+  }
   margin-bottom: 2.5rem;
-  font-size: 1.7rem;
+  font-weight: 300;
+  font-size: 2rem;
   @media ${device.large} {
     margin-bottom: 4rem;
     margin-top: 0;
@@ -42,6 +47,8 @@ const FaqTitle = styled(StyledH3)`
 
 const StyledAccordion = styled(Accordion)`
   width: 100%;
+  font-family: 'Oswald' !important;
+  font-weigth: 400;
 
   @media ${device.large} {
     width: 48%;
@@ -78,9 +85,9 @@ const AccordionsDesktopContainer = styled.div`
   }
 `;
 
-const Faq = ({ isDarkBackgroundColor }: { isDarkBackgroundColor?: boolean }) => {
+const Faq = () => {
   return (
-    <BackgroundContainer isDark={isDarkBackgroundColor}>
+    <BackgroundContainer>
       <FaqContainer>
         <FaqTitle>Preguntas frecuentes</FaqTitle>
         <AccordionsContainer>

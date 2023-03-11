@@ -18,7 +18,7 @@ display: inline-block;
   transition: ease-out 200ms;
   text-align:center;
   :hover {
-    color: ${colors.primary.dark};
+    color: ${colors.ui.grey5percent};
   }
 `;
 
@@ -48,7 +48,7 @@ const secondaryButton =  () => {
   return (
     <ButtonContainer>    
       <UnderLinedComponent>
-        <Link href='/' passHref legacyBehavior>
+        <Link href='/about' passHref legacyBehavior>
           <StyledLink>Conoce Más</StyledLink>
         </Link>
       </UnderLinedComponent>

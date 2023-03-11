@@ -1,5 +1,5 @@
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { SanityImageSource as SanityImageSourceAsset } from '@sanity/asset-utils';
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { SanityImageSource as SanityImageSourceAsset } from "@sanity/asset-utils";
 
 export interface Product {
   _id: string;
@@ -9,6 +9,7 @@ export interface Product {
   stock: number;
   sizeChart: ProductSizeChart[];
   description: string;
+  material: string;
   images: {
     image: SanityImageSource;
     asset: SanityImageSourceAsset;

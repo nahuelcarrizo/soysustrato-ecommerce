@@ -21,7 +21,7 @@ const PaddedImageContainer = styled.div`
 const CustomDots = ({ onClick, ...rest }: { onClick?: any; active?: boolean; index?: number }) => {
   const { active, index } = rest;
 
-  const   indicatorStyles: CSSProperties = {
+  const indicatorStyles: CSSProperties = {
     bottom: '-50px',
     background: '#E4C2BE',
     border: '1px solid #E4C2BE',

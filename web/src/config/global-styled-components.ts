@@ -110,7 +110,7 @@ export const StyledH4Title = styled.h4`
 `;
 
 export const Subtitle = styled.p`
-  font-family: ${typography.subtitle.font.name};
+  font-family: "Oswald";
   font-style: normal;
   font-weight: ${typography.subtitle.font.fontWeight};
   font-size: ${typography.subtitle.fontSize};
@@ -122,9 +122,10 @@ export const Subtitle = styled.p`
 `;
 
 export const BodyCopyRegularSmall = styled.p`
-  font-family: ${typography.bodyCopy.regular.font.name};
+  font-family: "Oswald";
   font-style: normal;
-  font-weight: ${typography.bodyCopy.regular.fontWeight};
+  font-size: 1.2rem;
+  font-weight: 300;
   font-size: ${typography.bodyCopy.regular.small.fontSize};
   line-height: ${typography.bodyCopy.regular.small.lineHeight};
   letter-spacing: ${typography.bodyCopy.regular.small.letterSpacing};
@@ -132,7 +133,7 @@ export const BodyCopyRegularSmall = styled.p`
 `;
 
 export const BodyCopyRegularLarge = styled.p`
-  font-family: ${typography.bodyCopy.regular.font.name};
+  font-family: "Oswald";
   font-style: normal;
   font-weight: ${typography.bodyCopy.regular.fontWeight};
   font-size: ${typography.bodyCopy.regular.large.fontSize};
@@ -142,7 +143,7 @@ export const BodyCopyRegularLarge = styled.p`
 `;
 
 export const BodyCopyBoldSmall = styled.p`
-  font-family: ${typography.bodyCopy.bold.font.name};
+  font-family: "Oswald";
   font-style: normal;
   font-weight: ${typography.bodyCopy.bold.fontWeight};
   font-size: ${typography.bodyCopy.bold.small.fontSize};
@@ -201,10 +202,10 @@ export const AlignedCenterContainer = styled.article`
 `;
 
 export const LabelLarge = styled.p`
-  font-family: ${typography.labels.large.regular.font.name};
-  font-style: normal;
+  font-family: "Oswald";
+  font-style: bold;
   font-weight: ${typography.labels.large.regular.font.fontWeight};
-  font-size: ${typography.labels.large.regular.fontSize};
+  font-size: 1.1rem;
   line-height: ${typography.labels.large.regular.lineHeight};
   letter-spacing: ${typography.labels.large.regular.letterSpacing};
   color: ${colors.ui.darkSurface};

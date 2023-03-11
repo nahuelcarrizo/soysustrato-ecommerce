@@ -13,8 +13,10 @@ import styled from 'styled-components';
 
 const CategoryHeader = styled(StyledH3Title)`
   text-align: center;
-  padding: 4rem 1.5rem 4rem 1.5rem;
+  padding: 4rem 4rem 1rem 4rem;
   background-color: ${colors.ui.grey5percent};
+  font-family: 'Oswald';
+  font-weight: 600;
 `;
 
 const HeaderSeparation = styled.div`
@@ -47,9 +49,10 @@ const ProductListContainer = styled.div`
 const TotalCount = styled(CaptionLarge)`
   text-align: center;
   padding-top: 2rem;
+  font-family: 'Oswald'
 `;
 
-const ProductList = ({ categoryName, products }: { categoryName: string; products: Product[] }) => {
+const ProductList = ({ categoryName, products, productsWithSize }: { categoryName: string; products: Product[], productsWithSize: Product[] }) => {
   const [sort, setSort] = useState(Order.DESC);
   const [filter, setFilter] = useState(Tags.All);
 
@@ -72,6 +75,7 @@ const ProductList = ({ categoryName, products }: { categoryName: string; product
   };
 
   const count = products.filter(getFilterFunction()).length;
+
 
   return (
     <div>

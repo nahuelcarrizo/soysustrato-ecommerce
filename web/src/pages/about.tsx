@@ -100,15 +100,11 @@ const AboutPage = ({ categories }: { categories: Array<CategoryConfiguration> })
         <CenteredContainer>
           <AboutTextContainer>
             <UpperText>
-              Maruja nace cómo un emprendimiento personal inspirado en mi abuela; María Mahia de Ares... ¿Quién fue
-              Maruja? Una mujer simple, amable, con mucha energía sobre todas las cosas, andaba de un lado para el otro
-              siempre con una sonrisa. Te animaba siempre a no preocuparte, a no hacerte problema por las cosas...
+              Soy Sustrato
             </UpperText>
             <Image alt="feed-image" key="maruja" src="/assets/Maruja-About.jpg" placeholderSrc={reusablePlaceholder} />
             <LowerText>
-              Hoy Maruja lorem ipusm nace cómo un emprendimiento personal inspirado en uién fue Maruja? Una mujer
-              simple, amable, con mucha energía sobre todas las cosas, andaba de un lado para el otro siempre con una
-              sonrisa. Te animaba siempre a no preocuparte, a no hacerte problema.
+            Soy Sustrato
             </LowerText>
           </AboutTextContainer>
           <BuyMarujaContainer>
@@ -117,7 +113,7 @@ const AboutPage = ({ categories }: { categories: Array<CategoryConfiguration> })
               <StyledIconListItem
                 removePadding={false}
                 image="/assets/Contact.svg"
-                text="Comprar a un emprendimiento Lorem ipsum dolor Mercado Envíos a toda la Argentina"
+                text="Mercado Envíos a toda la Argentina"
                 alt="beneficio"
                 key={1}
               />
@@ -125,7 +121,7 @@ const AboutPage = ({ categories }: { categories: Array<CategoryConfiguration> })
               <StyledIconListItem
                 removePadding={false}
                 image="/assets/Contact.svg"
-                text="Comprar a industria nacional  (?) lorem ipsum Corar a industria nacional  (?) lorem ipsum"
+                text="Comprar a industria nacional" 
                 alt="beneficio"
                 key={2}
               />
@@ -133,7 +129,7 @@ const AboutPage = ({ categories }: { categories: Array<CategoryConfiguration> })
               <StyledIconListItem
                 removePadding={true}
                 image="/assets/Contact.svg"
-                text="Comprar a industria nacional  (?) lorem ipsum"
+                text="Comprar a industria nacional"
                 alt="beneficio"
                 key={3}
               />

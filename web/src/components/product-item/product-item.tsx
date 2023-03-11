@@ -180,7 +180,7 @@ const StyledCarousel = styled(ProductItemCarousel)`
 `;
 
 const ImageMozaic = styled.article<{ rows: number }>`
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: ${(props) => `repeat(${props.rows}, 1fr);`};
   grid-gap: 1.2rem;
@@ -298,7 +298,7 @@ const ProductItemDisplay = ({ product, hasStock }: { product: Product; hasStock:
   return (
     <ProductItemContainer extraPadding={rows === 1}>
       <section>
-        <Link href="/categories/productos" passHref legacyBehavior>
+        <Link href="/categories/productos" passHref>
           <BackButton>
             <LinkImg src="/assets/Arrow-Back.svg" alt="arrow" />
             <BackCaption>Ir al listado</BackCaption>

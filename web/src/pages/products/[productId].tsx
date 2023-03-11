@@ -1,17 +1,15 @@
-import React from 'react';
-import { NextPageContext } from 'next';
-
-import { sanity } from '../../../lib/sanity';
-
-import Layout from '../../components/shared/layout';
-import Faq from '../../components/shared/faq';
-import UserReviews from '../../components/home/user-reviews';
 import { Product, ProductSizeChart } from '../../model/product';
-import ProductItemDisplay from '../../components/product-item/product-item';
 
-import { UserReviewsConfiguration } from '../../model/user-reviews-configuration';
 import { CategoryConfiguration } from '../../model/category-configuration';
+import Faq from '../../components/shared/faq';
+import Layout from '../../components/shared/layout';
+import { NextPageContext } from 'next';
+import ProductItemDisplay from '../../components/product-item/product-item';
+import React from 'react';
+import UserReviews from '../../components/home/user-reviews';
+import { UserReviewsConfiguration } from '../../model/user-reviews-configuration';
 import { calculateProductStock } from '../../components/shared/utilities';
+import { sanity } from '../../../lib/sanity';
 
 const ProductItem = ({
   product,
@@ -28,7 +26,7 @@ const ProductItem = ({
     <Layout categories={categories}>
       <ProductItemDisplay product={product} hasStock={hasStock} />
       {userReviews !== null && hasStock && <UserReviews {...userReviews} />}
-      <Faq isDarkBackgroundColor={true} />
+      <Faq />
     </Layout>
   );
 };

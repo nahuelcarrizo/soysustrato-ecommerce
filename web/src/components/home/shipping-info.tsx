@@ -11,6 +11,7 @@ import styled from 'styled-components';
 const ShippingInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding-bottom: 3rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 3rem;

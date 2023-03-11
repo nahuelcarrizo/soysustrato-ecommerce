@@ -1,11 +1,11 @@
 import About from '../components/home/about';
 import { CategoryConfiguration } from '../model/category-configuration';
 import Faq from '../components/shared/faq';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import Hero from '../components/home/hero';
 import { HeroConfiguration } from '../model/hero-configuration';
 import Layout from '../components/shared/layout';
 import ProductCategories from '../components/home/categories/product-categories';
-import Properties  from '../components/home/properties/properties';
 import { PropertiesConfiguration } from '../model/properties-configuration';
 import React from 'react';
 import ShippingInfo from '../components/home/shipping-info';
@@ -28,9 +28,9 @@ const Home = ({
 
   return (
     <Layout categories={categories}>
+      <FloatingWhatsApp phoneNumber='+5492975046070' accountName='Soy Sustrato' avatar='/assets/logo-header.jpg' allowClickAway chatMessage='Hola! Como podemos ayudarte? 🤝'/>
       <Hero videos={undefined} images={undefined} {...hero} />
       <ProductCategories categories={categories} />
-{/*       <Properties properties={properties}  /> */}
       <ShippingInfo />
       <UserReviews {...userReviews} />
       <Faq />

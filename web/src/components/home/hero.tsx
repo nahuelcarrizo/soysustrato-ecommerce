@@ -13,7 +13,7 @@ const TextContainer = styled.div`
   text-align: left;
   padding: 1.5rem 1rem;
   border-radius: 7px;
-  background-color: ${colors.secondary.keen};
+  background-color: #e6c75f;
   top: 6rem;
   overflow: visible;
   position: relative;
@@ -56,8 +56,8 @@ const Vid = styled(RemoteResponsiveVideo)`
 
 const HomeTitle = styled(StyledH1)`
 
-  font-family: "DynaPuff";
-  font-weight: 400;
+  font-family: "Poppins";
+  font-weight: 60000;
   font-size: 34px;
   line-height: 40px !important;
   @media ${device.large} {
@@ -71,13 +71,12 @@ const HomeContainer = styled(AlignedCenterContainer)`
     position: relative;
   }
 `;
-const Img = styled.img<{opacity: Any}>`
+const Img = styled.img`
 width: 100%;
 height: 100%;
 margin-top: 2.5rem;
 z-index:0;
 object-fit: contain;
-opacity: ${props => props.opacity};
 transition: opacity 0.5s ease-in-out 2s;
 @media ${device.large} {
   width: 50%;
@@ -141,7 +140,7 @@ const Hero = (props: ExtendedHeroConfig) => {
     <HomeContainer>
     {showVideo ? <Vid videos={props.videos} alt="hero video" onEnded={handleVideoEnded} />:
       <>
-      <Img src={props.images[index].url} alt="hero image" width={'500'} height={'500'} opacity={imageOpacity} onLoad={handleImageLoad} onError={handleImageLoad} onTransitionEnd={handleImageChange}/>
+      <Img src={props.images[index].url} alt="hero image" width={'500'} height={'500'}  onLoad={handleImageLoad} onError={handleImageLoad} onTransitionEnd={handleImageChange}/>
       <TextContainer>
         <HomeTitle>{props.title}</HomeTitle>
         <SubTitle>{props.subtitle}</SubTitle>

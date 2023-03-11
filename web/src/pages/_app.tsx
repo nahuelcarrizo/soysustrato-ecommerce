@@ -2,11 +2,13 @@ import '../config/fonts.css';
 import '../config/global-styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import React, { useEffect } from 'react';
+
 import type { AppProps } from 'next/app';
-import React from 'react';
 import SSRProvider from 'react-bootstrap/SSRProvider';
 import { StateProvider } from '../context/store';
 import {createGlobalStyle} from 'styled-components';
+import { useRouter } from 'next/router';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -26,6 +28,25 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      if (window.innerWidth > 1024) {
+        router.push('/desktop-only-page');
+      }
+    };
+
+    handleWindowResize();
+
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, [router]);
+
+
+
   return (
     <StateProvider>
       <GlobalStyle />

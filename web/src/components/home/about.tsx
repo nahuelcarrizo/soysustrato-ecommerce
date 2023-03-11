@@ -2,6 +2,7 @@ import { BodyCopyRegularSmall, StyledH3 } from '../../config/global-styled-compo
 import { device, reusablePlaceholder } from '../../config/device';
 
 import LazyLoadImage from '../shared/image-types/lazy-image';
+import Link from 'next/link'
 import React from 'react';
 import { colors } from '../../config/global-styles';
 import styled from 'styled-components';
@@ -77,6 +78,9 @@ const AboutMobile = styled(BodyCopyRegularSmall)`
   }
 `;
 
+const StyledLink = styled(Link)`
+  font-family: 'Oswald'
+  `;
 const About = () => {
   return (
     <BackgroundContainer>
@@ -86,8 +90,14 @@ const About = () => {
           <TextContainer>
             <MobileAboutTitle>Sobre Soy Sustrato</MobileAboutTitle>
             <AboutMobile>
-            LOS INSUMOS QUE OFRECEMOS SON <strong>SUSTENTABLES + BIODEGRADABLES + COMPOSTABLES.</strong>
-            ...
+            LOS INSUMOS QUE OFRECEMOS SON<br /> 
+            <strong>SUSTENTABLES + BIODEGRADABLES + COMPOSTABLES.</strong>
+            <br />
+            <br />
+            <StyledLink href='https://cdn.me-qr.com/pdf/9878822.pdf' legacyBehavior>
+              Conocenos haciendo click aca
+            </StyledLink>
+            
             </AboutMobile>
           </TextContainer>
         </ContentContainer>

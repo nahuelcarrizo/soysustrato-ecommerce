@@ -30,6 +30,7 @@ const Container = styled.section<ContainerProps>`
     background-color: ${props.isTransparent} !important;
     transition: ${props.transition};
     `}
+    
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   border-radius: 7px;
@@ -130,7 +131,7 @@ const StyledChevron = styled(Chevron)`
   margin-top: 1.781rem;
 `;
 
-const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
+const NavBar = ({ categories, isPage }: { categories: CategoryConfiguration[], isPage: Boolean }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isCartOpen, setCartOpen] = useState(false);
   const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
@@ -138,10 +139,14 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
   const [ isTransparent, setIsTransparent] = useState(null);
   const [ transition, setTransition] = useState('all .3s ease 0s');
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [ whiteReq, setWhiteReq] = useState(false);
   const trColor = 'trasparent' 
   const wtColor = 'white'
   const okTransition = 'all .3s ease 0s'
 
+  useEffect(()=>{
+    isPage ?? setWhiteReq(true);
+  },[isPage])
   
   useEffect(() => {
     if (isMenuOpen || isProductMenuOpen) {
@@ -169,7 +174,14 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
-  console.log("isTransparent: " + isTransparent, "transition: " + transition, "isMenuOpen: " + isMenuOpen);
+
+  useEffect(() => {
+    if (isNavbarUnpinned) {
+      setNavbarUnpinned(false);
+    } else {
+      setNavbarUnpinned(true);
+    }
+  }, [isNavbarUnpinned]);
   
   return (
     <HeadroomContainer
@@ -182,7 +194,10 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
       <Container isTransparent={isTransparent} transition={transition}>
         <MenuBotton
           onClick={() => setMenuOpen(!isMenuOpen)}
-          src={transition && !isMenuOpen
+          src={
+            isPage
+            ? '/assets/Menu.svg'
+            : transition && !isMenuOpen
             ? '/assets/Menu-white.svg'
             : isMenuOpen
             ? '/assets/Menu-Close.svg'
@@ -191,7 +206,7 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
         />
         <Menu isOpen={isMenuOpen} categories={categories} />
          <LogoLink href="/" >
-          <Logo isAtTop={transition} src={transition ? '/assets/soysustrato-logoblanco.png': '/assets/soysustrato-logonegro.png'} alt="Soy Sustrato Logo" />
+          <Logo isAtTop={transition} src={(transition && !isPage) ? '/assets/soysustrato-logoblanco.png': '/assets/soysustrato-logonegro.png'} alt="Soy Sustrato Logo" />
         </LogoLink>
 
         <LinkContainer onClick={() => setIsProductMenuOpen(!isProductMenuOpen)}>
@@ -203,7 +218,7 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
           <StyledLink>contacto y ayuda</StyledLink>
           </Link>
         <Link href="/about" passHref legacyBehavior>
-          <StyledLink>sobre Maruja</StyledLink>
+          <StyledLink>sobre Soy Sustrato</StyledLink>
         </Link>
         <Sidebar
           isOpen={isCartOpen}
@@ -217,6 +232,7 @@ const NavBar = ({ categories }: { categories: CategoryConfiguration[] }) => {
         </Sidebar>
         <CartButton
         isAtTop={transition}
+        isPage={isPage}
           clickHandler={() => {
             setIsProductMenuOpen(false);
             setCartOpen(!isCartOpen);

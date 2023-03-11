@@ -52,20 +52,19 @@ const StyledLink = styled.a`
 `;
 
 const ProductListItem = ({ product }: { product: Product }) => {
+  console.log(product)
   const link = `/products/${product._id}`;
   return (
     <ProductListItemContainer>
       <ProductItemImageContainer>
         {displayCorrectBadge(product)}
-        <Link href={link} passHref legacyBehavior>
           <StyledLink>
             <ProductItemImage image={product.images[0].image} alt={product.name} asset={product.images[0].asset} />
           </StyledLink>
-        </Link>
       </ProductItemImageContainer>
       <ProductItemTextContainer>
-        <ProductItemName>{product.name}</ProductItemName>
-        <ProductItemPrice>${product.price}</ProductItemPrice>
+        {product.material ?? <ProductItemName>{product.material}</ProductItemName>}
+        <ProductItemName>{product.description}</ProductItemName>
       </ProductItemTextContainer>
     </ProductListItemContainer>
   );

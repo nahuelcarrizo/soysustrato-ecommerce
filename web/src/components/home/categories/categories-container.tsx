@@ -133,14 +133,14 @@ const createCategoryContent = (category: CategoryConfiguration, isCategoriesPage
   const link = isCategoriesPage ? `${category.searchName}` : `categories/${category.searchName}`;
   return (
     <CategoryContainer key={category.name} index={index}>
-      <GradientDiv index={index} />
-    <CategoryImg image={category.image} alt={category.name} asset={category.asset} index={index} />
-
+      <GradientDiv index={index} >
+        <CategoryImg image={category.image} alt={category.name} asset={category.asset} index={index} />
+      </GradientDiv>
     <LinkContainer>
       <StyledLink index={index}>
-          <CategoryName>{category.name}</CategoryName>
-          </StyledLink>
-        
+        <CategoryName>{category.name}</CategoryName>
+      </StyledLink>
+      
       <Link href={link} passHref legacyBehavior>
           <CategoryDescription >{category.description}</CategoryDescription>
       </Link>
@@ -161,7 +161,7 @@ const createMobileResult = (categories: CategoryConfiguration[], isCategoriesPag
 
   function CategoriesContainer({ categories }: { categories: CategoryConfiguration[]; }) {
   const [isCategoriesPage, setIsCategoriesPage] = useState(false);
-  console.log(categories)
+
   useEffect(() => {
     setIsCategoriesPage(window.location.href.includes('categories'));
   }, []);

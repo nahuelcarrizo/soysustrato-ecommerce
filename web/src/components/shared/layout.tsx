@@ -14,7 +14,7 @@ import styled from 'styled-components';
 
 const Main = styled.main`
 
-  background-color: ${(props: { isCategoriesOrProducts: Boolean}) =>props.isCategoriesOrProducts ? 'white' : 'black'};
+  background-color: ${(props: { isPage: Boolean}) =>props.isPage ? 'white' : 'black'};
     display: flex;
   justify-content: center;
   align-items: center;
@@ -28,25 +28,26 @@ type LayoutProps = {
 };
 
 const Layout: FunctionComponent<LayoutProps> = (props) => {
-  const [isCategoriesOrProducts, setIsCategoriesOrProducts] = useState(false);
-  console.log(isCategoriesOrProducts)
+  const [isPage, setIsPage] = useState(false);
+
   useEffect(() => {
     const url = window.location.href
     const containsCategories = url.includes('categories');
     const containsProducts = url.includes('products');
-    const isCategoriesOrProducts = containsCategories || containsProducts;
+    const containsAbout = url.includes('about');
+    const isPageWhite = containsCategories || containsProducts || containsAbout;
 
-    setIsCategoriesOrProducts(isCategoriesOrProducts);
+    setIsPage(isPageWhite);
   }, []);
   
   return (
-    <Main isCategoriesOrProducts={isCategoriesOrProducts}>
+    <Main isPage={isPage}>
       <NextSeo title={SEO.title} description={SEO.description} openGraph={SEO.openGraph} twitter={SEO.twitter} />
       <Head>
         <title>Soy Sustrato</title>
         <link rel="icon" href="/soysustratoicon.ico" />
         </Head>
-      <NavBar categories={props.categories} />
+      <NavBar isPage={isPage} categories={props.categories} />
       {props.children}
       <Footer />
     </Main>

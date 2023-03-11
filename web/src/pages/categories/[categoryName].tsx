@@ -15,10 +15,12 @@ const CategoryDisplay = ({
   categories,
   products,
   categoryName,
+  productsWithSize
 }: {
   categories: CategoryConfiguration[];
   products: Product[];
   categoryName?: string;
+  productsWithSize?: Product[];
 }) => {
   const router = useRouter();
   const lowerCaseCategoryName = toLowerCase(router.query.categoryName);
@@ -26,8 +28,8 @@ const CategoryDisplay = ({
   const formatedCategoryName = capitalize(lowerCaseCategoryName);
   return (
     <Layout categories={categories}>
-      <ProductList categoryName={categoryName ?? formatedCategoryName} products={products} />
-      <Faq isDarkBackgroundColor={true} />
+      <ProductList categoryName={categoryName ?? formatedCategoryName} products={products} productsWithSize={productsWithSize} />
+      <Faq  />
     </Layout>
   );
 };

@@ -70,10 +70,9 @@ const Links = styled(LinksSmall)`
   }
 `;
 
-const CartButton = ({ clickHandler, isAtTop}) => {
+const CartButton = ({ clickHandler, isAtTop, isPage}) => {
   const { state, dispatch } = useContext(store);
   const [isWhite, setWhite] = useState(false)
-
 
   useEffect(() => {
     if (state?.openCart) {
@@ -83,12 +82,14 @@ const CartButton = ({ clickHandler, isAtTop}) => {
   }, [state?.openCart, clickHandler, dispatch]);
 
   useEffect(() => {
-    if (isAtTop) {
-      setWhite(true)
+    if (isAtTop && !isPage) {
+      setWhite(true);
+    } else if (isAtTop && isPage) {
+      setWhite(false);
     } else {
-      setWhite(false)
+      setWhite(false);
     }
-  }, [isAtTop]);
+  }, [isAtTop, isPage]);
 
 
  return (
