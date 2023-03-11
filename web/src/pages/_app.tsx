@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, { useEffect } from 'react';
 
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import SSRProvider from 'react-bootstrap/SSRProvider';
 import { StateProvider } from '../context/store';
@@ -52,6 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <SSRProvider>
         <Component {...pageProps} />
+        <Analytics />
       </SSRProvider>
     </StateProvider>
   );
